@@ -1,13 +1,13 @@
 {
     "builds": [{
-      "src": "A3academy/wsgi.py",
+      "src": "portfolio/wsgi.py",
       "use": "@vercel/python",
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.11.3" }
     }],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "A3academy/wsgi.py"
+        "dest": "portfolio/wsgi.py"
       }
     ]
 }
