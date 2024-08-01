@@ -884,6 +884,14 @@ select {
   height: 100vh;
 }
 
+.h-80 {
+  height: 20rem;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -902,6 +910,14 @@ select {
 
 .w-full {
   width: 100%;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
+.w-72 {
+  width: 18rem;
 }
 
 .flex-1 {
@@ -1053,6 +1069,11 @@ select {
   padding-bottom: 2rem;
 }
 
+.px-28 {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1063,6 +1084,10 @@ select {
 
 .pr-10 {
   padding-right: 2.5rem;
+}
+
+.pl-60 {
+  padding-left: 15rem;
 }
 
 .text-left {
