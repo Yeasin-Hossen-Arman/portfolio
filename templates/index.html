@@ -62,6 +62,53 @@
     </div>
 </section>
 
+<!-- SKILLS SECTION -->
+<section class="py-16 bg-gray-100" x-data="skillDisplay">
+    <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">Skills</h2>
+
+        <!-- Horizontal Skills -->
+        <div class="max-w-2xl mx-auto space-y-6">
+            <template x-for="skill in skills">
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span x-text="skill.title" class="font-semibold text-gray-700"></span>
+                        <span x-text="skill.percent + '%'" class="font-semibold text-gray-700"></span>
+                    </div>
+                    <div class="w-full bg-gray-300 h-3 rounded">
+                        <div :style="'width: '+skill.percent+'%'" class="h-3 bg-blue-500 rounded transition-all"></div>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <!-- Circle Skill Chart -->
+        <div class="mt-16 flex justify-center">
+            <div class="relative w-72 h-72 flex items-center justify-center">
+                <svg class="transform -rotate-90 w-72 h-72">
+                    <circle cx="145" cy="145" r="120" stroke="#D9D9D9" stroke-width="30" fill="transparent"/>
+                    <circle cx="145" cy="145" r="120" stroke="#3B82F6" stroke-width="30" fill="transparent"
+                            :stroke-dasharray="circumference"
+                            :stroke-dashoffset="circumference - currentSkill.percent / 100 * circumference"/>
+                </svg>
+                <span class="absolute text-5xl font-bold" x-text="currentSkill.percent + '%'"></span>
+            </div>
+        </div>
+
+        <!-- Skill Buttons -->
+        <div class="mt-12 flex flex-wrap justify-center gap-4">
+            <template x-for="skill in skills">
+                <button @click="currentSkill = skill"
+                        :class="currentSkill.title === skill.title ? 'bg-blue-600 font-bold ring-2 ring-gray-400' : 'bg-gray-700'"
+                        class="text-white px-4 py-2 rounded transition-all">
+                    <span x-text="skill.title"></span>
+                </button>
+            </template>
+        </div>
+    </div>
+</section>
+
+
 <!-- MODERN CONTACT SECTION -->
 <section class="py-16 bg-white" id="contact">
     <div class="container mx-auto max-w-4xl">
@@ -165,6 +212,24 @@
         <p class="mt-2">Portfolio created using Tailwind CSS & Alpine.js</p>
     </div>
 </footer>
+
+<!-- Alpine.js Skill Data -->
+<script>
+document.addEventListener('alpine:init', () => {
+    Alpine.data('skillDisplay', () => ({
+        skills: [
+            {title: 'Web Design', percent: 80},
+            {title: 'Machine Learning & Deep Learning', percent: 95},
+            {title: 'Image Processing', percent: 65},
+            {title: 'Computer Vision', percent: 75}
+        ],
+        currentSkill: {title: 'Web Design', percent: 80},
+        get circumference() {
+            return 2 * Math.PI * 120;
+        }
+    }))
+})
+</script>
 
 </body>
 </html>
