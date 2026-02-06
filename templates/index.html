@@ -1,573 +1,228 @@
-{% comment %} {% load static tailwind_tags %} {% endcomment %} {% comment %} {% load static %} {% endcomment %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arman-portfolio</title>
+    <title>Yeasin Hossen Arman - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.0/dist/cdn.min.js"></script>
+</head>
+<body class="bg-slate-100 text-gray-900">
 
-    <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>    
-    {% comment %} {% tailwind_css %} {% endcomment %}
-  </head>
-  <body>
-    <div id="portfolio">
-      <main class="w-full bg-slate-500 from-slate-500 text-white">
-        <nav class="w-full">
-          <div class="flex justify-between w-full px-16 pt-8">
-            <!-- Left Nav -->
-            <div>
-              <ul class="flex flex-col text-left md:flex-row space-y-5 md:space-y-0 md:space-x-6 text-xl md:text-2xl">
-                <li class="text-left">
-                  <a href="#experience">Experience</a>
-                </li>
-                <li class="text-left">
-                  <a href="#contact">Contact</a>
-                </li>
-              </ul>
-            </div>
-            <!-- Right Nav -->
-            <div>
-              <!-- Socials -->
-              <ul class="flex flex-col md:flex-row items-end md:items-center md:space-x-4 space-y-4 md:space-y-0">
-                <li>
-                  <a href="https://github.com/Yeasin-Hossen-Arman" target="_blank" aria-label="Github" class="hover:text-blue-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+<!-- NAVIGATION -->
+<nav class="bg-slate-500 text-white">
+    <div class="container mx-auto flex justify-between items-center px-8 py-4">
+        <ul class="flex space-x-6 text-xl">
+            <li><a href="#experience" class="hover:text-blue-300">Experience</a></li>
+            <li><a href="#contact" class="hover:text-blue-300">Contact</a></li>
+        </ul>
+        <ul class="flex space-x-4">
+            <li>
+                <a href="https://github.com/Yeasin-Hossen-Arman" target="_blank" aria-label="Github" class="hover:text-blue-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59..."></path>
                     </svg>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="https://www.linkedin.com" target="_blank" aria-label="linkedin" class="hover:text-blue-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 rounded-full" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                      <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn" class="hover:text-blue-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708..."></path>
                     </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-        {% comment %} <div class="flex">
-          <div class="left w-1/2 pl-60 pr-10 py-38 items-center">
-            <img class="w-72 h-96" src="https://github.com/Yeasin-Hossen-Arman/ML_Course_SKITBI/blob/main/Src/file.png?raw=true" alt="main image" srcset="" />
-          </div>
-          <div class="right w-1/2 px-20 py-38">
-            <h1 class="text-blue-50 px-10 font-extralight text-4xl">
-              Im
-              <span class="italic hover:not-italic font-bold text-stone-400">Yeasin Hossen Arman</span>
-            </h1>
-            <h3 class="py-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, reprehenderit.</h3>
-            <h4 class="text-lg font-medium text-neutral-400">I'm passionate with Python, Django, Flask, Machine learning, Deep learning, Computer vision and image processing.Additionally, I have a strong foundation in classical machine learning and possess the requisite mathematical prowess.</h4>
-          </div>
-        </div> {% endcomment %}
-      </main>
+                </a>
+            </li>
+        </ul>
     </div>
+</nav>
 
-    <section>
-      <div class="bg-slate-500 from-slate-500 text-white py-1">
-        <div class="container mx-auto flex flex-col md:flex-row items-center my-0 md:my-24">
-          <div class="p-4 mt-6 mb-3 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-1/2 justify-center">
-            <div class="max-w-sm md:max-w-2xl flex flex-wrap content-center">
-              <img class="md:w-72 md:h-96 sm:w-32 sm:h-36" src="https://github.com/Yeasin-Hossen-Arman/ML_Course_SKITBI/blob/main/Src/file.png?raw=true" alt="main image" srcset="" />
-            </div>
-          </div>
-
-          <div class="flex flex-col w-full lg:w-1/2 justify-center items-start p-8">
-            <div class="">
-              <h1 class="text-blue-50 px-10 font-extralight text-4xl">
-                Im
-                <span class="italic hover:not-italic font-bold text-stone-400">Yeasin Hossen Arman</span>
-              </h1>
-              
-              <h1 class="py-10"><span id="element"></span></h1>
-              <h4 class="text-lg font-medium text-neutral-400">I'm passionate with Python, Django, Flask, Machine learning, Deep learning, Computer vision and image processing.Additionally, I have a strong foundation in classical machine learning and possess the requisite mathematical prowess.</h4>
-            </div>
-          </div>
+<!-- HERO SECTION -->
+<section class="bg-slate-500 text-white py-16">
+    <div class="container mx-auto flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 flex justify-center">
+            <img src="https://github.com/Yeasin-Hossen-Arman/ML_Course_SKITBI/blob/main/Src/file.png?raw=true"
+                 alt="Yeasin Hossen Arman" class="md:w-72 md:h-96 sm:w-40 sm:h-48 rounded-lg shadow-lg">
         </div>
-      </div>
-    </section>
-
-    {% comment %}skil section start{% endcomment %}
-
-    <div class="mt-7 flex justify-center items-center ">
-      <div class="max-w-xl mx-auto md:w-full">
-        <!-- To achieve the desired progress, you can update the 'stroke-dasharray' property. -->
-        <h4 class="text-3xl md:text-5xl dark:text-black font-bold mb-6">Skills</h4>
-
-        <div>
-          <div class="mb-7">
-            <div class="flex justify-between py-1">
-              <span class="text-base text-gray-lite font-semibold dark:text-[#A6A6A6]">Web Design</span>
-              <span class="text-base font-semibold text-gray-lite pr-5 dark:text-[#A6A6A6]">80%</span>
-            </div>
-            <svg class="rc-progress-line" viewBox="0 0 100 1" preserveAspectRatio="none">
-              <path class="rc-progress-line-trail" d="M 0.5,0.5
-             L 99.5,0.5" stroke-linecap="round" stroke="#D9D9D9" stroke-width="1" fill-opacity="0"></path>
-              <path class="rc-progress-line-path" d="M 0.5,0.5
-             L 99.5,0.5" stroke-linecap="round" stroke="#FF6464" stroke-width="1" fill-opacity="0" style="stroke-dasharray: 79.2px, 100px; stroke-dashoffset: 0px; transition: stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s, stroke 0.3s linear 0s, 0.06s;"></path>
-            </svg>
-          </div>
-  
-          <div class="mb-7">
-            <div class="flex justify-between py-1">
-              <span class="text-base text-gray-lite font-semibold dark:text-[#A6A6A6]">Mechine Learning & Deep Learning</span>
-              <span class="text-base font-semibold text-gray-lite pr-5 dark:text-[#A6A6A6]">95%</span>
-            </div>
-            <svg class="rc-progress-line" viewBox="0 0 100 1" preserveAspectRatio="none">
-              <path class="rc-progress-line-trail" d="M 0.5,0.5
-             L 99.5,0.5" stroke-linecap="round" stroke="#D9D9D9" stroke-width="1" fill-opacity="0"></path>
-              <path class="rc-progress-line-path" d="M 0.5,0.5
-             L 99.5,0.5" stroke-linecap="round" stroke="#9272D4" stroke-width="1" fill-opacity="0" style="stroke-dasharray: 94.05px, 100px; stroke-dashoffset: 0px; transition: stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s, stroke 0.3s linear 0s, 0.06s;"></path>
-            </svg>
-          </div>
-  
-          <div class="mb-7">
-            <div class="flex justify-between py-1">
-              <span class="text-base text-gray-lite font-semibold dark:text-[#A6A6A6]">Images Processing</span>
-              <span class="text-base font-semibold text-gray-lite pr-5 dark:text-[#A6A6A6]">65%</span>
-            </div>
-            <svg class="rc-progress-line" viewBox="0 0 100 1" preserveAspectRatio="none">
-              <path class="rc-progress-line-trail" d="M 0.5,0.5
-             L 99.5,0.5" stroke-linecap="round" stroke="#D9D9D9" stroke-width="1" fill-opacity="0"></path>
-              <path class="rc-progress-line-path" d="M 0.5,0.5
-             L 99.5,0.5" stroke-linecap="round" stroke="#5185D4" stroke-width="1" fill-opacity="0" style="stroke-dasharray: 64.35px, 100px; stroke-dashoffset: 0px; transition: stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s, stroke 0.3s linear 0s, 0.06s;"></path>
-            </svg>
-          </div>
-  
-          <div class="mb-7">
-            <div class="flex justify-between py-1">
-              <span class="text-base text-gray-lite font-semibold dark:text-[#A6A6A6]">Computer Vision</span>
-              <span class="text-base font-semibold text-gray-lite pr-5 dark:text-[#A6A6A6]">75%</span>
-            </div>
-            <svg class="rc-progress-line" viewBox="0 0 100 1" preserveAspectRatio="none">
-              <path class="rc-progress-line-trail" d="M 0.5,0.5
-             L 99.5,0.5" stroke-linecap="round" stroke="#D9D9D9" stroke-width="1" fill-opacity="0"></path>
-              <path class="rc-progress-line-path" d="M 0.5,0.5
-             L 99.5,0.5" stroke-linecap="round" stroke="#CA56F2" stroke-width="1" fill-opacity="0" style="stroke-dasharray: 74.25px, 100px; stroke-dashoffset: 0px; transition: stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s, stroke 0.3s linear 0s, 0.06s;"></path>
-            </svg>
-          </div>
+        <div class="md:w-1/2 mt-8 md:mt-0 px-4">
+            <h1 class="text-4xl md:text-5xl font-extralight">I'm <span class="font-bold italic text-stone-300">Yeasin Hossen Arman</span></h1>
+            <h4 class="mt-6 text-lg text-gray-200">I'm passionate about Python, Django, Flask, Machine Learning, Deep Learning, Computer Vision, and Image Processing. I also have a strong foundation in classical machine learning and mathematics.</h4>
+            <h2 class="mt-6 text-2xl font-semibold"><span id="element" class="text-blue-200"></span></h2>
         </div>
-      
-      </div>
     </div>
+</section>
 
+<!-- SKILLS SECTION -->
+<section class="py-16 bg-gray-100" x-data="skillDisplay">
+    <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">Skills</h2>
 
-    <div>
-      <main class="grid mt-7 p-7 text-gray-100 bg-gray-200 place-content-center">
+        <!-- Horizontal Skills -->
+        <div class="max-w-2xl mx-auto space-y-6">
+            <template x-for="skill in skills">
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span x-text="skill.title" class="font-semibold text-gray-700"></span>
+                        <span x-text="skill.percent + '%'" class="font-semibold text-gray-700"></span>
+                    </div>
+                    <div class="w-full bg-gray-300 h-3 rounded">
+                        <div :style="'width: '+skill.percent+'%'" class="h-3 bg-blue-500 rounded transition-all"></div>
+                    </div>
+                </div>
+            </template>
+        </div>
 
-        <section x-data="skillDisplay"
-            class="p-6 space-y-4 bg-gray-500 rounded-xl md:grid md:grid-cols-2 md:gap-4 sm:space-y-1">
-            <div class="grid grid-cols-2 gap-2">
-                <template x-for="skill in skills">
-                    <button x-text="skill.title"
-                        class="w-20 text-sm px-2 py-1 md:w-28 md:px-4 md:py-2 md:text-xl text-gray-100 transition bg-blue-600 rounded-md h-14 hover:bg-blue-700"
-                        :class="(currentSkill.title == skill.title) && 'font-bold ring-2 ring-gray-100'"
-                        @click="currentSkill = skill"></button>
-                </template>
-            </div>
-    
-            <div class="flex items-center justify-center" x-data="{ circumference: 2 * 22 / 7 * 120 }">
+        <!-- Circle Skill Chart -->
+        <div class="mt-16 flex justify-center">
+            <div class="relative w-72 h-72 flex items-center justify-center">
                 <svg class="transform -rotate-90 w-72 h-72">
-                    <circle cx="145" cy="145" r="120" stroke="currentColor" stroke-width="30" fill="transparent"
-                        class="text-gray-700" />
-    
-                    <circle cx="145" cy="145" r="120" stroke="currentColor" stroke-width="30" fill="transparent"
-                        :stroke-dasharray="circumference"
-                        :stroke-dashoffset="circumference - currentSkill.percent / 100 * circumference"
-                        class="text-blue-500 " />
+                    <circle cx="145" cy="145" r="120" stroke="#D9D9D9" stroke-width="30" fill="transparent"/>
+                    <circle cx="145" cy="145" r="120" stroke="#3B82F6" stroke-width="30" fill="transparent"
+                            :stroke-dasharray="circumference"
+                            :stroke-dashoffset="circumference - currentSkill.percent / 100 * circumference"/>
                 </svg>
-                <span class="absolute text-5xl" x-text="`${currentSkill.percent}%`"></span>
-        </section>
-      </main>
+                <span class="absolute text-5xl font-bold" x-text="currentSkill.percent + '%'"></span>
+            </div>
+        </div>
+
+        <!-- Skill Buttons -->
+        <div class="mt-12 flex flex-wrap justify-center gap-4">
+            <template x-for="skill in skills">
+                <button @click="currentSkill = skill"
+                        :class="currentSkill.title === skill.title ? 'bg-blue-600 font-bold ring-2 ring-gray-400' : 'bg-gray-700'"
+                        class="text-white px-4 py-2 rounded transition-all">
+                    <span x-text="skill.title"></span>
+                </button>
+            </template>
+        </div>
     </div>
+</section>
 
-    
-    
-
-
-
-
-    {% comment %}skill section end{% endcomment %}
-
-    <!-- section -->
-    <section class="sm:p-20 p-5" id="contact">
-      <div class="sm:container mx-auto">
-        <h2 class="text-center text-4xl font-bold pb-10">Contact</h2>
-        <div class="w-full sm:flex">
-          <div class="sm:w-1/2 w-full">
-            <div class="mb-5">
-              <h3 class="text-xl">Address</h3>
-              <p class="text-gray-500">Chittagong, Bangladesh</p>
-            </div>
-
-            <div class="mb-5">
-              <h3 class="text-xl">Email</h3>
-              <a class="text-gray-500" href="mailto:rir.cse.71@gmail.com">hossenarman830@gmail.com</a>
-            </div>
-
-            <div class="mb-5">
-              <h3 class="text-xl">Email</h3>
-              <a class="text-gray-500" href="https:wa.me/01750009149">+8801867943600</a>
-            </div>
-          </div>
-
-          <div class="sm:w-1/2 w-full bg-gray-50 p-10 rounded-md">
-            <form action="#">
-              <div class="mt-5 grid grid-cols-1 gap-y-8 sm:grid-cols-6">
-                <div class="sm:col-span-4">
-                  <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Name</label>
-                  <input type="text" name="username" id="username" autocomplete="username" class="block w-full outline-1 border border-1 flex-1 bg-transparent py-1.5 pl-3 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6" placeholder="Enter name" />
+<!-- CONTACT SECTION -->
+<section class="py-16 bg-white" id="contact">
+    <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">Contact</h2>
+        <div class="flex flex-col md:flex-row gap-12">
+            <div class="md:w-1/2 space-y-6">
+                <div>
+                    <h3 class="font-semibold text-xl">Address</h3>
+                    <p>Chittagong, Bangladesh</p>
                 </div>
-              </div>
-
-              <div class="mt-5 grid grid-cols-1 gap-y-8 sm:grid-cols-6">
-                <div class="sm:col-span-4">
-                  <label for="subject" class="block text-sm font-medium leading-6 text-gray-900">Subject</label>
-                  <input type="text" name="subject" id="subject" autocomplete="subject" class="block w-full outline-1 border border-1 flex-1 bg-transparent py-1.5 pl-3 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6" placeholder="Hiring" />
+                <div>
+                    <h3 class="font-semibold text-xl">Email</h3>
+                    <a href="mailto:hossenarman830@gmail.com" class="text-blue-500">hossenarman830@gmail.com</a>
                 </div>
-              </div>
-
-              <div class="mt-5 grid grid-cols-1 gap-y-8 sm:grid-cols-6">
-                <div class="sm:col-span-4">
-                  <label for="message" class="block text-sm font-medium leading-6 text-gray-900">Message</label>
-                  <textarea name="message" id="message" autocomplete="message" class="block w-full outline-1 border border-1 flex-1 bg-transparent py-1.5 pl-3 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6" placeholder="Message"></textarea>
+                <div>
+                    <h3 class="font-semibold text-xl">Phone</h3>
+                    <a href="https://wa.me/01750009149" class="text-blue-500">+8801867943600</a>
                 </div>
-              </div>
-
-              <div class="mt-5 grid grid-cols-1 gap-y-8 sm:grid-cols-6">
-                <a href="#" class="bg-gray-200 mx-auto w-32 text-center rounded-md p-2 border border-1 border-gray-100 hover:bg-white">Submit</a>
-              </div>
-            </form>
-          </div>
+            </div>
+            <div class="md:w-1/2 bg-gray-50 p-8 rounded shadow">
+                <form>
+                    <div class="mb-6">
+                        <label class="block mb-2 font-medium">Name</label>
+                        <input type="text" class="w-full p-2 border rounded" placeholder="Enter name">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block mb-2 font-medium">Subject</label>
+                        <input type="text" class="w-full p-2 border rounded" placeholder="Subject">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block mb-2 font-medium">Message</label>
+                        <textarea class="w-full p-2 border rounded" placeholder="Your message"></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Submit</button>
+                </form>
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-
-
-    {% comment %} education section start {% endcomment %}
-
-    <section class="text-gray-600 body-font" id="experience">
-      <div class="container px-5 py-24 mx-auto flex flex-wrap">
-        <div class="text-center text-4xl font-bold pb-1">
-          <h1>Education</h1>
+<!-- EDUCATION SECTION -->
+<section class="py-16 bg-gray-100" id="experience">
+    <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">Education</h2>
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+            <div class="lg:w-2/5 space-y-12">
+                <!-- BSc CSE -->
+                <div class="flex relative">
+                    <div class="flex-shrink-0 w-10 h-10 bg-indigo-500 text-white rounded-full flex items-center justify-center z-10">C</div>
+                    <div class="flex-grow pl-6">
+                        <h3 class="font-semibold">Computer Science</h3>
+                        <p>BSc in Computer Science & Engineering</p>
+                        <p>Southern University Bangladesh, Chittagong</p>
+                    </div>
+                </div>
+                <!-- BSc Chemistry -->
+                <div class="flex relative">
+                    <div class="flex-shrink-0 w-10 h-10 bg-indigo-500 text-white rounded-full flex items-center justify-center z-10">H</div>
+                    <div class="flex-grow pl-6">
+                        <h3 class="font-semibold">Hon's</h3>
+                        <p>BSc in Chemistry</p>
+                        <p>National University Bangladesh</p>
+                    </div>
+                </div>
+                <!-- HSC -->
+                <div class="flex relative">
+                    <div class="flex-shrink-0 w-10 h-10 bg-indigo-500 text-white rounded-full flex items-center justify-center z-10">H</div>
+                    <div class="flex-grow pl-6">
+                        <h3 class="font-semibold">HSC</h3>
+                        <p>Chittagong Board</p>
+                    </div>
+                </div>
+                <!-- SSC -->
+                <div class="flex relative">
+                    <div class="flex-shrink-0 w-10 h-10 bg-indigo-500 text-white rounded-full flex items-center justify-center z-10">S</div>
+                    <div class="flex-grow pl-6">
+                        <h3 class="font-semibold">SSC</h3>
+                        <p>Madrasah Board</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-3/5 flex justify-center">
+                <img src="https://dei2yvdxppkas.cloudfront.net/wp-content/uploads/2023/09/wpstream-featured-image-stream-graduation-e1694786653761.webp"
+                     alt="Graduation" class="rounded shadow-lg lg:h-80 object-cover">
+            </div>
         </div>
-        <div class="flex flex-wrap w-full">
-          <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
-            <div class="flex relative pb-12">
-              <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-              </div>
-              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  {% comment %} <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path> {% endcomment %}
-                  <path fill="blue" d="M12 .807L23.835 8.5L22 9.693V16h-2v-5.007l-1 .65V17.5c0 1.47-1.014 2.615-2.253 3.339c-1.265.737-2.945 1.16-4.747 1.16s-3.483-.423-4.747-1.16C6.013 20.115 5 18.969 5 17.499v-5.856L.165 8.5zM7 12.943V17.5c0 .463.33 1.067 1.261 1.61c.908.53 2.227.89 3.739.89s2.831-.36 3.739-.89c.932-.543 1.26-1.147 1.26-1.61v-4.557l-5 3.25zM20.165 8.5L12 3.193L3.835 8.5L12 13.807z" />
-                </svg>
-              </div>
-              
-              {% comment %} step start {% endcomment %}
-              <div class="flex-grow pl-4">
-                <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Computer Science</h2>
-                <p class="leading-relaxed">BSc in Computer Scinece & Engineering</p>
-                <p class="leading-relaxed">Southern University Bangladesh, Chittagong</p>
-                
-              </div>
-            </div>
-            <div class="flex relative pb-12">
-              <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-              </div>
-              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  {% comment %} <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path> {% endcomment %}
-                  <path fill="blue" d="M12 .807L23.835 8.5L22 9.693V16h-2v-5.007l-1 .65V17.5c0 1.47-1.014 2.615-2.253 3.339c-1.265.737-2.945 1.16-4.747 1.16s-3.483-.423-4.747-1.16C6.013 20.115 5 18.969 5 17.499v-5.856L.165 8.5zM7 12.943V17.5c0 .463.33 1.067 1.261 1.61c.908.53 2.227.89 3.739.89s2.831-.36 3.739-.89c.932-.543 1.26-1.147 1.26-1.61v-4.557l-5 3.25zM20.165 8.5L12 3.193L3.835 8.5L12 13.807z" />
-                </svg>
-              </div>
-              <div class="flex-grow pl-4">
-                <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Hon's</h2>
-                <p class="leading-relaxed">BSc in Chemistry</p>
-                <p class="leading-relaxed">National University Bangladesh</p>
-              </div>
-            </div>
-            <div class="flex relative pb-12">
-              <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-              </div>
-              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  <circle cx="12" cy="5" r="3"></circle>
-                  {% comment %} <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path> {% endcomment %}
-                  {% comment %} <path fill="blue" fill-rule="evenodd" d="M9.5 0A1.5 1.5 0 0 0 8 1.5V3H1.5A1.5 1.5 0 0 0 0 4.5v6A1.5 1.5 0 0 0 1.5 12H6v2H4v1h9.5a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 13.5 0zM8.085 14H7v-2h1v1.5q.001.264.085.5M9.5 14h4a.5.5 0 0 0 .5-.5V6H9v7.5a.5.5 0 0 0 .5.5M9 5h5V1.5a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 0-.5.5z"/> {% endcomment %}
-                  {% comment %} <path stroke-linecap="round" d="M14 42h20m-10-8v8" /> {% endcomment %}
-                  <path fill="blue" d="M12 .807L23.835 8.5L22 9.693V16h-2v-5.007l-1 .65V17.5c0 1.47-1.014 2.615-2.253 3.339c-1.265.737-2.945 1.16-4.747 1.16s-3.483-.423-4.747-1.16C6.013 20.115 5 18.969 5 17.499v-5.856L.165 8.5zM7 12.943V17.5c0 .463.33 1.067 1.261 1.61c.908.53 2.227.89 3.739.89s2.831-.36 3.739-.89c.932-.543 1.26-1.147 1.26-1.61v-4.557l-5 3.25zM20.165 8.5L12 3.193L3.835 8.5L12 13.807z" />
-                </svg>
-              </div>
-              <div class="flex-grow pl-4">
-                <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">HSC</h2>
-                <p class="leading-relaxed">Chittagong Board.</p>
-              </div>
-            </div>
+    </div>
+</section>
 
-            {% comment %} <div class="flex relative pb-12">
-              <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-              </div>
-               <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  <path fill="blue" d="M12 .807L23.835 8.5L22 9.693V16h-2v-5.007l-1 .65V17.5c0 1.47-1.014 2.615-2.253 3.339c-1.265.737-2.945 1.16-4.747 1.16s-3.483-.423-4.747-1.16C6.013 20.115 5 18.969 5 17.499v-5.856L.165 8.5zM7 12.943V17.5c0 .463.33 1.067 1.261 1.61c.908.53 2.227.89 3.739.89s2.831-.36 3.739-.89c.932-.543 1.26-1.147 1.26-1.61v-4.557l-5 3.25zM20.165 8.5L12 3.193L3.835 8.5L12 13.807z" />
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <div class="flex-grow pl-4">
-                <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 4</h2>
-                <p class="leading-relaxed">VHS cornhole santo offal.</p>
-              </div>
-            </div>   {% endcomment %}
-
-            <div class="flex relative">
-              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                  {% comment %} <path d="M22 4L12 14.01l-3-3"></path> {% endcomment %}
-                  <path fill="blue" d="M12 .807L23.835 8.5L22 9.693V16h-2v-5.007l-1 .65V17.5c0 1.47-1.014 2.615-2.253 3.339c-1.265.737-2.945 1.16-4.747 1.16s-3.483-.423-4.747-1.16C6.013 20.115 5 18.969 5 17.499v-5.856L.165 8.5zM7 12.943V17.5c0 .463.33 1.067 1.261 1.61c.908.53 2.227.89 3.739.89s2.831-.36 3.739-.89c.932-.543 1.26-1.147 1.26-1.61v-4.557l-5 3.25zM20.165 8.5L12 3.193L3.835 8.5L12 13.807z" />
-                </svg>
-              </div>
-              <div class="flex-grow pl-4">
-                <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">SSC</h2>
-                <p class="leading-relaxed">Madrasah Board</p>
-              </div>
-            </div>
-          </div>
-          <img class="lg:w-2/5 md:w-2/5 lg:h-80 md:pt-36 object-cover object-center rounded-lg md:mt-0 mt-12" src="https://dei2yvdxppkas.cloudfront.net/wp-content/uploads/2023/09/wpstream-featured-image-stream-graduation-e1694786653761.webp" alt="step">
-        </div>
-      </div>
-    </section>
-
-
-    {% comment %} education section end {% endcomment %}
-
-
-
-
-    <footer class="bg-gray-50 lg:p-20 p-10">
-      <section class="container mx-auto ">
-        <div class="sm:grid justify-between sm:grid-cols-2 lg:grid-cols-4">
-          <div class="flex gap-5 flex-col">
-            <img class="h-6 w-1/2" src="https://rabiulislam.dev/documents/images/portfolio/portfolio.png" alt="logo" />
+<!-- FOOTER -->
+<footer class="bg-gray-50 py-16">
+    <div class="container mx-auto grid lg:grid-cols-4 sm:grid-cols-2 gap-8">
+        <div class="space-y-4">
+            <img src="https://rabiulislam.dev/documents/images/portfolio/portfolio.png" alt="logo" class="h-6">
             <p>Portfolio is a kind of identity of yourself</p>
-            <h4>Yeasin Hossen Arman</h4>
-          </div>
-
-          <div class="mt-10 sm:mt-0">
-            <h3 class="text-xl font-bold">Quick links</h3>
-            <ul>
-              <li class="m-3 hover:text-gray-500">
-                <a href="#about">About</a>
-              </li>
-              <li class="m-3 hover:text-gray-500">
-                <a href="#services">Services</a>
-              </li>
-              <li class="m-3 hover:text-gray-500">
-                <a href="#portfolio">Portfolio</a>
-              </li>
-              <li class="m-3 hover:text-gray-500">
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-
-          {% comment %} <div class="mt-10 sm:mt-0">
-            <h3 class="text-xl font-bold">Quick links</h3>
-            <ul>
-              <li class="m-3 hover:text-gray-500">
-                <a href="#about">About</a>
-              </li>
-              <li class="m-3 hover:text-gray-500">
-                <a href="#services">Services</a>
-              </li>
-              <li class="m-3 hover:text-gray-500">
-                <a href="#portfolio">Portfolio</a>
-              </li>
-              <li class="m-3 hover:text-gray-500">
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div> {% endcomment %}
-
-          {% comment %} <div class="mt-10 sm:mt-0">
-            <h3 class="text-xl font-bold">Quick links</h3>
-            <ul>
-              <li class="m-3 hover:text-gray-500">
-                <a href="#about">About</a>
-              </li>
-              <li class="m-3 hover:text-gray-500">
-                <a href="#services">Services</a>
-              </li>
-              <li class="m-3 hover:text-gray-500">
-                <a href="#portfolio">Portfolio</a>
-              </li>
-              <li class="m-3 hover:text-gray-500">
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div> {% endcomment %}
+            <p class="font-bold">Yeasin Hossen Arman</p>
         </div>
-      </section>
-    </footer>
+        <div>
+            <h3 class="font-bold text-xl mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+                <li><a href="#about" class="hover:text-gray-500">About</a></li>
+                <li><a href="#services" class="hover:text-gray-500">Services</a></li>
+                <li><a href="#portfolio" class="hover:text-gray-500">Portfolio</a></li>
+                <li><a href="#contact" class="hover:text-gray-500">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
-    <div class="bg-gray-100 pt-2">
-      <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
-        max-w-screen-lg items-center">
-          <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-              <a href="/#" class="w-6 mx-1">
-                  <svg class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%"
-                      viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
-                      style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
-                      <path id="Twitter" d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
-                    5.373,-12 12,-12c6.627,0 12,5.373 12,12Zm-6.465,-3.192c-0.379,0.168
-                    -0.786,0.281 -1.213,0.333c0.436,-0.262 0.771,-0.676
-                    0.929,-1.169c-0.408,0.242 -0.86,0.418 -1.341,0.513c-0.385,-0.411
-                    -0.934,-0.667 -1.541,-0.667c-1.167,0 -2.112,0.945 -2.112,2.111c0,0.166
-                    0.018,0.327 0.054,0.482c-1.754,-0.088 -3.31,-0.929
-                    -4.352,-2.206c-0.181,0.311 -0.286,0.674 -0.286,1.061c0,0.733 0.373,1.379
-                    0.94,1.757c-0.346,-0.01 -0.672,-0.106 -0.956,-0.264c-0.001,0.009
-                    -0.001,0.018 -0.001,0.027c0,1.023 0.728,1.877 1.694,2.07c-0.177,0.049
-                    -0.364,0.075 -0.556,0.075c-0.137,0 -0.269,-0.014 -0.397,-0.038c0.268,0.838
-                    1.048,1.449 1.972,1.466c-0.723,0.566 -1.633,0.904 -2.622,0.904c-0.171,0
-                    -0.339,-0.01 -0.504,-0.03c0.934,0.599 2.044,0.949 3.237,0.949c3.883,0
-                    6.007,-3.217 6.007,-6.008c0,-0.091 -0.002,-0.183 -0.006,-0.273c0.413,-0.298
-                    0.771,-0.67 1.054,-1.093Z"></path>
-                  </svg>
-              </a>
-              <a href="/#" class="w-6 mx-1">
-                  <svg class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%"
-                      viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
-                      style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
-                      <path id="Facebook" d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
-                    5.373,-12 12,-12c6.627,0 12,5.373
-                    12,12Zm-11.278,0l1.294,0l0.172,-1.617l-1.466,0l0.002,-0.808c0,-0.422
-                    0.04,-0.648 0.646,-0.648l0.809,0l0,-1.616l-1.295,0c-1.555,0 -2.103,0.784
-                    -2.103,2.102l0,0.97l-0.969,0l0,1.617l0.969,0l0,4.689l1.941,0l0,-4.689Z"></path>
-                  </svg>
-              </a>
-              <a href="/#" class="w-6 mx-1">
-                  <svg class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%"
-                      viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
-                      style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
-                      <g id="Layer_1">
-                          <circle id="Oval" cx="12" cy="12" r="12"></circle>
-                          <path id="Shape" d="M19.05,8.362c0,-0.062 0,-0.125 -0.063,-0.187l0,-0.063c-0.187,-0.562
-                       -0.687,-0.937 -1.312,-0.937l0.125,0c0,0 -2.438,-0.375 -5.75,-0.375c-3.25,0
-                       -5.75,0.375 -5.75,0.375l0.125,0c-0.625,0 -1.125,0.375
-                       -1.313,0.937l0,0.063c0,0.062 0,0.125 -0.062,0.187c-0.063,0.625 -0.25,1.938
-                       -0.25,3.438c0,1.5 0.187,2.812 0.25,3.437c0,0.063 0,0.125
-                       0.062,0.188l0,0.062c0.188,0.563 0.688,0.938 1.313,0.938l-0.125,0c0,0
-                       2.437,0.375 5.75,0.375c3.25,0 5.75,-0.375 5.75,-0.375l-0.125,0c0.625,0
-                       1.125,-0.375 1.312,-0.938l0,-0.062c0,-0.063 0,-0.125
-                       0.063,-0.188c0.062,-0.625 0.25,-1.937 0.25,-3.437c0,-1.5 -0.125,-2.813
-                       -0.25,-3.438Zm-4.634,3.927l-3.201,2.315c-0.068,0.068 -0.137,0.068
-                       -0.205,0.068c-0.068,0 -0.136,0 -0.204,-0.068c-0.136,-0.068 -0.204,-0.204
-                       -0.204,-0.34l0,-4.631c0,-0.136 0.068,-0.273 0.204,-0.341c0.136,-0.068
-                       0.272,-0.068 0.409,0l3.201,2.316c0.068,0.068 0.136,0.204
-                       0.136,0.34c0.068,0.136 0,0.273 -0.136,0.341Z" style="fill: rgb(255, 255, 255);"></path>
-                      </g>
-                  </svg>
-              </a>
-              <a href="/#" class="w-6 mx-1">
-                  <svg class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%"
-                      viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
-                      style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
-                      <path id="Shape" d="M7.3,0.9c1.5,-0.6 3.1,-0.9 4.7,-0.9c1.6,0 3.2,0.3 4.7,0.9c1.5,0.6 2.8,1.5
-                    3.8,2.6c1,1.1 1.9,2.3 2.6,3.8c0.7,1.5 0.9,3 0.9,4.7c0,1.7 -0.3,3.2
-                    -0.9,4.7c-0.6,1.5 -1.5,2.8 -2.6,3.8c-1.1,1 -2.3,1.9 -3.8,2.6c-1.5,0.7
-                    -3.1,0.9 -4.7,0.9c-1.6,0 -3.2,-0.3 -4.7,-0.9c-1.5,-0.6 -2.8,-1.5
-                    -3.8,-2.6c-1,-1.1 -1.9,-2.3 -2.6,-3.8c-0.7,-1.5 -0.9,-3.1 -0.9,-4.7c0,-1.6
-                    0.3,-3.2 0.9,-4.7c0.6,-1.5 1.5,-2.8 2.6,-3.8c1.1,-1 2.3,-1.9
-                    3.8,-2.6Zm-0.3,7.1c0.6,0 1.1,-0.2 1.5,-0.5c0.4,-0.3 0.5,-0.8 0.5,-1.3c0,-0.5
-                    -0.2,-0.9 -0.6,-1.2c-0.4,-0.3 -0.8,-0.5 -1.4,-0.5c-0.6,0 -1.1,0.2
-                    -1.4,0.5c-0.3,0.3 -0.6,0.7 -0.6,1.2c0,0.5 0.2,0.9 0.5,1.3c0.3,0.4 0.9,0.5
-                    1.5,0.5Zm1.5,10l0,-8.5l-3,0l0,8.5l3,0Zm11,0l0,-4.5c0,-1.4 -0.3,-2.5
-                    -0.9,-3.3c-0.6,-0.8 -1.5,-1.2 -2.6,-1.2c-0.6,0 -1.1,0.2 -1.5,0.5c-0.4,0.3
-                    -0.8,0.8 -0.9,1.3l-0.1,-1.3l-3,0l0.1,2l0,6.5l3,0l0,-4.5c0,-0.6 0.1,-1.1
-                    0.4,-1.5c0.3,-0.4 0.6,-0.5 1.1,-0.5c0.5,0 0.9,0.2 1.1,0.5c0.2,0.3 0.4,0.8
-                    0.4,1.5l0,4.5l2.9,0Z"></path>
-                  </svg>
-              </a>
-              <a href="/#" class="w-6 mx-1">
-                  <svg class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%"
-                      viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
-                      style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
-                      <path id="Combined-Shape" d="M12,24c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12c-6.627,0
-                    -12,5.373 -12,12c0,6.627 5.373,12 12,12Zm6.591,-15.556l-0.722,0c-0.189,0
-                    -0.681,0.208 -0.681,0.385l0,6.422c0,0.178 0.492,0.323
-                    0.681,0.323l0.722,0l0,1.426l-4.675,0l0,-1.426l0.935,0l0,-6.655l-0.163,0l-2.251,8.081l-1.742,0l-2.222,-8.081l-0.168,0l0,6.655l0.935,0l0,1.426l-3.74,0l0,-1.426l0.519,0c0.203,0
-                    0.416,-0.145 0.416,-0.323l0,-6.422c0,-0.177 -0.213,-0.385
-                    -0.416,-0.385l-0.519,0l0,-1.426l4.847,0l1.583,5.704l0.042,0l1.598,-5.704l5.021,0l0,1.426Z"></path>
-                  </svg>
-              </a>
-          </div>
-          <div class="my-5">© Copyright 2024. All Rights Reserved.</div>
-      </div>
-  </div>
-
-
-
-
-  <script>
-    document.addEventListener('alpine:init', () => {
-        Alpine.data('skillDisplay', () => ({
-            skills: [{
-                    'title': 'HTML',
-                    'percent': '95',
-                },
-                {
-                    'title': 'CSS',
-                    'percent': '70',
-                },
-                {
-                    'title': 'Tailwind css',
-                    'percent': '90',
-                },
-                {
-                    'title': 'JavaScript',
-                    'percent': '70',
-                },
-                {
-                    'title': 'React JS',
-                    'percent': '80',
-                }, {
-                    'title': 'Java',
-                    'percent': '65',
-                }, {
-                    'title': 'Python',
-                    'percent': '80',
-                }
-            ],
-            currentSkill: {
-                'title': 'HTML',
-                'percent': '95',
-            }
-        }));
-    });
-</script>
- <!-- Setup and start animation! -->
- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
- <script>
-  var typed = new Typed('#element', {
-    strings: ["Web developer","Machine Learning","Deep Learning","Graphics Designer"],
-    typeSpeed: 120,
-    backSpeed: 50,
-    loop: true
-  });
+<!-- Alpine.js Skill Data -->
+<script>
+document.addEventListener('alpine:init', () => {
+    Alpine.data('skillDisplay', () => ({
+        skills: [
+            {title: 'Web Design', percent: 80},
+            {title: 'Machine Learning & Deep Learning', percent: 95},
+            {title: 'Image Processing', percent: 65},
+            {title: 'Computer Vision', percent: 75}
+        ],
+        currentSkill: {title: 'Web Design', percent: 80},
+        get circumference() {
+            return 2 * Math.PI * 120;
+        }
+    }))
+})
 </script>
 
-  </body>
+</body>
 </html>
