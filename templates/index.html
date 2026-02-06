@@ -109,6 +109,85 @@
 </section>
 
 
+
+<!-- Project Section Start -->
+<section id="projects" class="py-24 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500">
+  <div class="container mx-auto px-5">
+    <h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-16" data-aos="fade-up">My Projects</h2>
+
+    <div class="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Project Card -->
+      <div data-aos="fade-up" class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 hover:scale-105 transition duration-500">
+        <img src="https://via.placeholder.com/400x250" alt="Project 1" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Project One</h3>
+          <p class="text-gray-700 mb-4">A modern web app built with Python, Django, and Tailwind CSS. Fully responsive and interactive.</p>
+          <div class="flex justify-between items-center">
+            <a href="https://example.com/project1" target="_blank" class="text-indigo-600 font-semibold hover:underline flex items-center space-x-1">
+              <span>Live Demo</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://github.com/Yeasin-Hossen-Arman/project1" target="_blank" class="text-gray-500 hover:text-indigo-600 flex items-center">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div data-aos="fade-up" data-aos-delay="100" class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 hover:scale-105 transition duration-500">
+        <img src="https://via.placeholder.com/400x250" alt="Project 2" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Project Two</h3>
+          <p class="text-gray-700 mb-4">Machine learning app using Flask and Random Forest for clinical prediction. Interactive and data-driven.</p>
+          <div class="flex justify-between items-center">
+            <a href="https://example.com/project2" target="_blank" class="text-indigo-600 font-semibold hover:underline flex items-center space-x-1">
+              <span>Live Demo</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://github.com/Yeasin-Hossen-Arman/project2" target="_blank" class="text-gray-500 hover:text-indigo-600 flex items-center">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div data-aos="fade-up" data-aos-delay="200" class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 hover:scale-105 transition duration-500">
+        <img src="https://via.placeholder.com/400x250" alt="Project 3" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Project Three</h3>
+          <p class="text-gray-700 mb-4">React and Tailwind CSS project with smooth UI animations. Fully interactive and modern web design.</p>
+          <div class="flex justify-between items-center">
+            <a href="https://example.com/project3" target="_blank" class="text-indigo-600 font-semibold hover:underline flex items-center space-x-1">
+              <span>Live Demo</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://github.com/Yeasin-Hossen-Arman/project3" target="_blank" class="text-gray-500 hover:text-indigo-600 flex items-center">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- See More Button -->
+    <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="300">
+      <a href="https://github.com/Yeasin-Hossen-Arman" target="_blank" class="inline-block bg-white text-indigo-600 font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-indigo-600 hover:text-white transition duration-500">See More Projects</a>
+    </div>
+  </div>
+</section>
+<!-- Project Section End -->
+
+
+
+
+
+
+
+
 <!-- MODERN CONTACT SECTION -->
 <section class="py-16 bg-white" id="contact">
     <div class="container mx-auto max-w-4xl">
@@ -269,6 +348,13 @@ document.addEventListener('alpine:init', () => {
         }
     }))
 })
+</script>
+
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
 </script>
 
 </body>
