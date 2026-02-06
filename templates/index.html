@@ -1,4 +1,4 @@
-{% load static %}
+{% comment %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -270,6 +270,145 @@ document.addEventListener('alpine:init', () => {
     }))
 })
 </script>
+
+</body>
+</html> {% endcomment %}
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yeasin Hossen Arman | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 scroll-smooth">
+
+  <!-- NAVIGATION -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">Yeasin Hossen Arman</h1>
+      <nav class="space-x-6">
+        <a href="#about" class="hover:text-blue-500">About</a>
+        <a href="#projects" class="hover:text-blue-500">Projects</a>
+        <a href="#contact" class="hover:text-blue-500">Contact</a>
+        <a href="https://github.com/yourusername" target="_blank" class="text-gray-700 hover:text-black"><i class="fab fa-github text-xl"></i></a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-blue-700 hover:text-blue-900"><i class="fab fa-linkedin text-xl"></i></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="pt-24 bg-gradient-to-r from-blue-100 to-blue-50">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+      <div class="md:w-1/2 space-y-6">
+        <h2 class="text-4xl md:text-5xl font-bold">Hi, I'm Yeasin Hossen Arman</h2>
+        <p class="text-lg md:text-xl text-gray-600">A passionate developer specializing in Web Development, Machine Learning, and modern web applications.</p>
+        <a href="#contact" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Hire Me</a>
+      </div>
+      <div class="md:w-1/2 mt-8 md:mt-0">
+        <img src="https://via.placeholder.com/400" alt="Profile Picture" class="rounded-xl shadow-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / EDUCATION -->
+  <section id="about" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold text-center mb-12">About Me & Education</h2>
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="space-y-4">
+        <h3 class="text-2xl font-semibold">About Me</h3>
+        <p class="text-gray-600">I am a Full Stack Developer and Machine Learning enthusiast from Bangladesh. I enjoy building web apps, solving real-world problems with technology, and learning new frameworks.</p>
+        <p class="text-gray-600">Skills: Python, Django, Flask, React, Tailwind CSS, Bootstrap, Machine Learning, Deep Learning.</p>
+      </div>
+      <div class="space-y-6">
+        <h3 class="text-2xl font-semibold">Education</h3>
+        <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-600">
+          <h4 class="font-bold text-lg">Bachelor of Science in Computer Science</h4>
+          <p class="text-gray-600">University of Chittagong, Bangladesh (2021 - 2025)</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-600">
+          <h4 class="font-bold text-lg">Higher Secondary Certificate</h4>
+          <p class="text-gray-600">Chittagong College (2019 - 2021)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="bg-gray-100 py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Project Card -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+          <img src="https://via.placeholder.com/400x200" alt="Project 1" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Clinical Note Analyzer</h3>
+            <p class="text-gray-600 mb-4">A web app to analyze clinical notes and predict diseases using ML models.</p>
+            <a href="#" class="text-blue-600 font-semibold hover:underline">View Project</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+          <img src="https://via.placeholder.com/400x200" alt="Project 2" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+            <p class="text-gray-600 mb-4">Responsive portfolio website built with HTML, Tailwind CSS, and JavaScript.</p>
+            <a href="#" class="text-blue-600 font-semibold hover:underline">View Project</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+          <img src="https://via.placeholder.com/400x200" alt="Project 3" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Anemia Prediction App</h3>
+            <p class="text-gray-600 mb-4">A machine learning-based web app to predict anemia with user-friendly interface.</p>
+            <a href="#" class="text-blue-600 font-semibold hover:underline">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold text-center mb-12">Contact Me</h2>
+    <div class="max-w-3xl mx-auto bg-white p-10 rounded-xl shadow-lg">
+      <form action="https://formspree.io/f/myyvlkdp" method="POST" class="space-y-6">
+        <div>
+          <label class="block font-medium mb-2">Name</label>
+          <input type="text" name="name" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block font-medium mb-2">Email</label>
+          <input type="email" name="email" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block font-medium mb-2">Message</label>
+          <textarea name="message" required rows="5" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+        <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Send Message</button>
+      </form>
+    </div>
+    <p class="text-center text-gray-500 mt-4">Or email me directly at <a href="mailto:hossenarman830@gmail.com" class="text-blue-600 hover:underline">hossenarman830@gmail.com</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-white py-8 mt-20">
+    <div class="max-w-7xl mx-auto px-6 text-center space-y-4">
+      <p>© 2026 Yeasin Hossen Arman. All rights reserved.</p>
+      <div class="space-x-4">
+        <a href="https://github.com/yourusername" target="_blank" class="hover:text-gray-400"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/yourusername" target="_blank" class="hover:text-gray-400"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
