@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yeasin Hossen Arman - Portfolio</title>
+    {#<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">#}
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.12.0/dist/cdn.min.js"></script>
 </head>
@@ -47,6 +49,17 @@
         </ul>
     </div>
 </nav>
+ {% comment %} navigation end {% endcomment %}
+
+
+
+
+
+
+
+
+
+
 
 <!-- HERO SECTION -->
 <section class="bg-slate-500 text-white py-16">
@@ -86,7 +99,14 @@
     <!-- About Info -->
     <div class="flex-1">
       <p class="mb-10 max-w-2xl text-gray-700 text-lg">
-        I am an experienced Frontend Developer with over a decade of professional expertise in the field. Throughout my career, I have had the privilege of collaborating with prestigious organizations, contributing to their success and growth.
+        
+        I hold a Bachelor of Science degree in Computer Science and Engineering and have developed strong skills in full-stack web development and artificial intelligence. I have hands-on experience with Django, Flask (Python), Laravel (PHP), and the MERN stack (JavaScript). My expertise includes front-end frameworks like React and CSS libraries such as Tailwind and Bootstrap, as well as backend technologies including Node.js, Express.js, MongoDB, and SQL databases.
+
+        I am also proficient in machine learning, natural language processing (NLP), and deep learning, having completed several projects that demonstrate my ability to build intelligent systems.
+
+        I am passionate about leveraging my diverse technical skills to develop innovative solutions and continuously expand my knowledge in both software development and AI.
+
+
       </p>
 
 
@@ -152,14 +172,17 @@
 
 
 
+
 <!-- SKILLS SECTION -->
 <section class="py-16 bg-gray-100" x-data="skillDisplay">
     <div class="container mx-auto">
         <h2 class="text-4xl font-bold text-center mb-12">Skills</h2>
 
         <!-- Horizontal Skills -->
-        <div class="max-w-2xl mx-auto space-y-6">
-            <template x-for="skill in skills">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        {#<div class="max-w-2xl mx-auto space-y-6 sm:px-12 lg:px-8">#}
+            <template x-for="skill in barSkills" :key="skill.title">
+            {#<template x-for="skill in skills"> #}
                 <div>
                     <div class="flex justify-between mb-1">
                         <span x-text="skill.title" class="font-semibold text-gray-700"></span>
@@ -187,7 +210,9 @@
 
         <!-- Skill Buttons -->
         <div class="mt-12 flex flex-wrap justify-center gap-4">
-            <template x-for="skill in skills">
+
+            <template x-for="skill in chartSkills" :key="skill.title">
+            {#<template x-for="skill in skills">#}
                 <button @click="currentSkill = skill"
                         :class="currentSkill.title === skill.title ? 'bg-blue-600 font-bold ring-2 ring-gray-400' : 'bg-gray-700'"
                         class="text-white px-4 py-2 rounded transition-all">
@@ -197,6 +222,8 @@
         </div>
     </div>
 </section>
+
+
 
 
 
@@ -262,17 +289,135 @@
 <!-- Services Section End -->
 
 
+<div class="text-center max-w-2xl mx-auto mb-14">
+
+    <span class="text-blue-600 text-sm font-semibold uppercase tracking-widest">
+        WHY CHOOSE US
+    </span>
+
+    <h2 class="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
+
+        Your Best Choice
+
+    </h2>
+
+    <p class="mt-4 text-gray-500 text-sm md:text-base leading-7">
+
+        We combine experience, innovation and dedication to provide
+        high-quality solutions that exceed expectations.
+
+    </p>
+
+</div>
 
 
+<div>
+<!-- Cards -->
+        <div class="grid md:grid-cols-3 gap-8 mt-16">
+
+            <!-- Card -->
+            <div
+                class="group bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-3">
+
+                <div
+                    class="w-20 h-20 mx-auto rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-4xl transition duration-500 group-hover:bg-blue-600 group-hover:text-white group-hover:rotate-12">
+
+                    <i class="fas fa-award"></i>
+
+                </div>
+
+                <h3
+                    class="text-2xl font-bold text-center mt-8 group-hover:text-blue-600 transition">
+
+                    Best Quality
+
+                </h3>
+
+                <p class="text-gray-600 text-center mt-4 leading-7">
+
+                    We never compromise quality.
+                    Every project is delivered following strict quality standards
+                    while maintaining safety and reliability.
+
+                </p>
+
+            </div>
+
+            <!-- Card -->
+
+            <div
+                class="group bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-3">
+
+                <div
+                    class="w-20 h-20 mx-auto rounded-full bg-green-100 flex items-center justify-center text-green-600 text-4xl transition duration-500 group-hover:bg-green-600 group-hover:text-white group-hover:rotate-12">
+
+                    <i class="fas fa-clock"></i>
+
+                </div>
+
+                <h3
+                    class="text-2xl font-bold text-center mt-8 group-hover:text-green-600 transition">
+
+                    On Time
+
+                </h3>
+
+                <p class="text-gray-600 text-center mt-4 leading-7">
+
+                    Our experienced team respects every deadline and ensures
+                    projects are completed on schedule without sacrificing quality.
+
+                </p>
+
+            </div>
+
+            <!-- Card -->
+
+            <div
+                class="group bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-3">
+
+                <div
+                    class="w-20 h-20 mx-auto rounded-full bg-purple-100 flex items-center justify-center text-purple-600 text-4xl transition duration-500 group-hover:bg-purple-600 group-hover:text-white group-hover:rotate-12">
+
+                    <i class="fas fa-user-check"></i>
+
+                </div>
+
+                <h3
+                    class="text-2xl font-bold text-center mt-8 group-hover:text-purple-600 transition">
+
+                    Experienced
+
+                </h3>
+
+                <p class="text-gray-600 text-center mt-4 leading-7">
+
+                    Years of experience allow us to deliver innovative,
+                    efficient and reliable solutions for every client.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Button -->
+
+        <div class="text-center mt-16">
+
+            <a href="#"
+               class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-2xl transition duration-300 hover:scale-105">
+
+                Learn More
+
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+        </div>
 
 
-
-
-
-
-
-
-
+</div>
 
 
 
@@ -362,60 +507,13 @@
 
 
 
-<!-- MODERN CONTACT SECTION -->
-<section class="py-16 bg-white" id="contact">
-    <div class="container mx-auto max-w-4xl">
-        <h2 class="text-4xl font-bold text-center mb-12">Contact Me</h2>
-        <div class="grid md:grid-cols-2 gap-12">
-            <!-- Contact Info -->
-            <div class="space-y-6">
-                <div class="flex items-start gap-4">
-                    <span class="text-blue-500 text-2xl">📍</span>
-                    <div>
-                        <h3 class="font-semibold text-lg">Address</h3>
-                        <p>Chittagong, Bangladesh</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-4">
-                    <span class="text-blue-500 text-2xl">✉️</span>
-                    <div>
-                        <h3 class="font-semibold text-lg">Email</h3>
-                        <a href="mailto:hossenarman830@gmail.com" class="text-blue-500 hover:underline">hossenarman830@gmail.com</a>
-                    </div>
-                </div>
-                <div class="flex items-start gap-4">
-                    <span class="text-blue-500 text-2xl">📞</span>
-                    <div>
-                        <h3 class="font-semibold text-lg">Phone</h3>
-                        <a href="https://wa.me/01750009149" class="text-blue-500 hover:underline">+8801867943600</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Contact Form -->
-            <div class="bg-gray-50 p-8 rounded-lg shadow-md">
-                <form class="space-y-6">
-                    <div class="relative">
-                        <input type="text" id="name" placeholder=" " class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2" />
-                        <label for="name" class="absolute left-0 -top-3.5 text-gray-500 text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base transition-all">Name</label>
-                    </div>
-                    <div class="relative">
-                        <input type="text" id="subject" placeholder=" " class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2" />
-                        <label for="subject" class="absolute left-0 -top-3.5 text-gray-500 text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base transition-all">Subject</label>
-                    </div>
-                    <div class="relative">
-                        <textarea id="message" placeholder=" " rows="4" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2"></textarea>
-                        <label for="message" class="absolute left-0 -top-3.5 text-gray-500 text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base transition-all">Message</label>
-                    </div>
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded transition">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+
+
+
 
 <!-- MODERN EDUCATION SECTION -->
 <section class="py-16 bg-gray-100" id="experience">
-    <div class="container mx-auto max-w-5xl">
+    <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 space-y-6">
         <h2 class="text-4xl font-bold text-center mb-12">Education</h2>
         <div class="relative border-l-2 border-blue-500 ml-4">
             <!-- BSc CSE -->
@@ -462,7 +560,27 @@
 
 
 
-<section id="contact" class="py-16 bg-gray-100">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} <section id="contact" class="py-16 bg-gray-100">
   <div class="max-w-4xl mx-auto px-6">
     <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
     <p class="text-center text-gray-600 mb-12">Have a question or want to work together? Send me a message!</p>
@@ -491,7 +609,88 @@
       <p class="text-center text-gray-500 mt-4 text-sm">Or email me directly at <a href="mailto:hossenarman830@gmail.com" class="text-blue-500 hover:underline">hossenarman830@gmail.com</a></p>
     </form>
   </div>
+</section> {% endcomment %}
+
+
+
+<!-- MODERN CONTACT SECTION -->
+<section class="py-16 bg-gray-10 " id="contact">
+    <div class="container mx-auto max-w-4xl">
+        <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
+        <p class="text-center text-gray-600 mb-12">Have a question or want to work together? Send me a message!</p>
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Contact Info -->
+            <div class="space-y-6 mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-start gap-4">
+                    <span class="text-blue-500 text-2xl">📍</span>
+                    <div>
+                        <h3 class="font-semibold text-lg">Address</h3>
+                        <p>Chittagong, Bangladesh</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="text-blue-500 text-2xl">✉️</span>
+                    <div>
+                        <h3 class="font-semibold text-lg">Email</h3>
+                        <a href="mailto:hossenarman830@gmail.com" class="text-blue-500 hover:underline">hossenarman830@gmail.com</a>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="text-blue-500 text-2xl">📞</span>
+                    <div>
+                        <h3 class="font-semibold text-lg">Phone</h3>
+                        <a href="https://wa.me/01750009149" class="text-blue-500 hover:underline">+8801867943600</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Form -->
+
+            <div class="bg-gray-50 p-4 rounded-lg shadow-md">
+
+
+              <form action="https://formspree.io/f/mnqwert" method="POST" class="bg-white p-8 rounded-xl shadow-md space-y-6">
+
+      
+                <div class="relative">
+                  <input type="text" name="name" placeholder=" " class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2" required />
+                  <label class="absolute left-0 -top-3.5 text-gray-500 text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base transition-all">Your Name</label>
+                </div>
+
+                <div class="relative">
+                  <input type="email" name="email" placeholder=" " class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2" required />
+                  <label class="absolute left-0 -top-3.5 text-gray-500 text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base transition-all">Your Email</label>
+                </div>
+
+                <div class="relative">
+                  <textarea name="message" placeholder=" " rows="5" class="peer w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2" required></textarea>
+                  <label class="absolute left-0 -top-3.5 text-gray-500 text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base transition-all">Your Message</label>
+                </div>
+
+                <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition">Send Message</button>
+
+                <p class="text-center text-gray-500 mt-4 text-sm">Or email me directly at <a href="mailto:hossenarman830@gmail.com" class="text-blue-500 hover:underline">hossenarman830@gmail.com</a></p>
+              </form>
+
+
+
+
+
+
+
+                
+            </div>
+        </div>
+    </div>
 </section>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -510,11 +709,52 @@
 <script>
 document.addEventListener('alpine:init', () => {
     Alpine.data('skillDisplay', () => ({
-        skills: [
+
+        barSkills: [
+            { title: 'Python', percent: 95 },
+            { title: 'Django', percent: 95 },
+            { title: 'Flask', percent: 85 },
+            { title: 'Laravel', percent: 85 },
+            { title: 'React.js', percent: 90 },
+            { title: 'Node.js', percent: 88 }
+        ],
+
+
+
+
+
+        chartSkills: [
             {title: 'Web Design', percent: 80},
-            {title: 'Machine Learning & Deep Learning', percent: 95},
+            
+            { title: 'Python', percent: 95 },
+
+            
+            { title: 'Django', percent: 95 },
+            { title: 'Flask', percent: 85 },
+            { title: 'PHP', percent: 85 },
+            { title: 'Laravel', percent: 85 },
+            { title: 'JavaScript', percent: 90 },
+            { title: 'React.js', percent: 90 },
+            { title: 'Node.js', percent: 88 },
+            { title: 'Express.js', percent: 88 },
+            { title: 'MongoDB', percent: 85 },
+            { title: 'SQL', percent: 85 },
+            { title: 'Tailwind CSS', percent: 95 },
+            { title: 'Bootstrap', percent: 90 },
+            { title: 'HTML5', percent: 98 },
+            { title: 'CSS3', percent: 95 },
+            { title: 'Git', percent: 90 },
+            { title: 'GitHub', percent: 90 },
+            { title: 'REST API Development', percent: 92 },
+            { title: 'Machine Learning (ML)', percent: 90 },
+            { title: 'Deep Learning (DL)', percent: 88 },
+            { title: 'Natural Language Processing (NLP)', percent: 85 },
             {title: 'Image Processing', percent: 65},
-            {title: 'Computer Vision', percent: 75}
+            {title: 'Computer Vision', percent: 75},
+            { title: 'Object-Oriented Programming (OOP)', percent: 95 },
+            { title: 'MVC Architecture', percent: 90 },
+            { title: 'Responsive Web Design', percent: 95 },
+            { title: 'API Integration', percent: 92 }
 
         ],
         currentSkill: {title: 'Web Design', percent: 80},
